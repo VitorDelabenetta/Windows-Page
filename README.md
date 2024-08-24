@@ -40,7 +40,7 @@ git clone https://github.com/VitorDelabenetta/Windows-Page.git
 
 ## Preview
 
-<img src="./imagens/preview/project_preview.png" alt="imagem-da-página-principal" style="width: 100%"/>
+<img src="./images/preview/project_preview.png" alt="imagem-da-página-principal" style="width: 100%"/>
 
 <i>Imagem de preview, mostrando a página principal do projeto</i>
 
