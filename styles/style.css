@@ -1,0 +1,174 @@
+body {
+    background-image: url(../images/background.jpg);
+}
+
+/* Programas */
+
+#programs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 125px;
+    gap: 25px;
+    width: 195px;
+}
+
+.application {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* Caixas de Diálogo */
+
+[class*="notification_window"] {
+    position: absolute;
+    width: 300px;
+    box-shadow: inset -2px -2px var(--black), inset 2px 2px var(--light-grey);
+    background-color: var(--dark-grey);
+}
+
+.notification_window_1 {
+    left: 300px;
+    top: 245px;
+}
+.notification_window_2 {
+    left: 525px;
+    top: 385px;
+}
+
+.window_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 2px 3px;
+    background-color: var(--dark-blue);
+}
+.window_header .text {
+    font-weight: 700;
+}
+
+.window_options {
+    display: flex;
+    gap: 5px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.window_content {
+    height: 90px;
+    
+    & .text {
+        margin: 15px 0 0 20px;
+        color: var(--black);
+    }
+}
+
+.select_options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.option_box {
+    width: 85px;
+    height: 25px;
+}
+
+/* Notepad */
+
+.notepad {
+    position: absolute;
+    right: 150px;
+    top: 200px;
+    width: 350px;
+    background-color: var(--dark-grey);
+    box-shadow: inset -2px -2px var(--black), inset 2px 2px var(--light-grey);
+}
+
+.notepad_header, .notepad_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notepad_header {
+    margin: 5px;
+    padding: 2px 3px;
+    background-color: var(--dark-blue);
+}
+
+.notepad_info {
+    gap: 5px;
+
+    & .text {
+        font-weight: 700;
+    }
+}
+
+.notepad_options {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+
+    & .text {
+        color: var(--black);
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+.notepad_options p::first-letter {
+    text-decoration: underline;
+}
+
+.notepad_content {
+    padding: 10px;
+    margin: 5px 10px 10px 10px;
+    background-color: var(--light-grey);
+    box-shadow: inset 2px 2px var(--black), inset -2px -2px var(--light-grey);
+
+    overflow: scroll;
+    resize: vertical;
+    width: 330px;
+    min-height: 90px;
+    max-height: 145px;
+}
+.notepad_content .text {
+    color: var(--black);
+    font-family: var(--notepad-font);
+    font-weight: 500;
+}
+
+/* Rodapé do Site */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 35px;
+    background-color: var(--dark-grey);
+}
+
+#windows_start {
+    width: 70px;
+    height: 80%;
+}
+
+#windows_start .text {
+    color: var(--black);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#time {
+    color: var(--black);
+    font-weight: 500;
+    margin-right: 15px;
+}

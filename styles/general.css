@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    /* coloração */
+    --background: #008080;
+    --light-grey: #E4E4E4;
+    --dark-grey: #C0C0C0;
+    --black: #232323;
+    --blue: #0511F2;
+    --dark-blue: #000080;
+    /* fonte */
+    --font: "DM Sans", sans-serif;
+    --notepad-font: "Kode Mono", sans-serif;
+}
+
+::selection {
+    color: var(--black);
+    background-color: var(--light-grey);
+}
+
+.text {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--light-grey);
+}
+
+.text-link {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--blue);
+}
+
+.icon {
+    width: 40px;
+}
+
+.icon-small {
+    width: 20px;
+}
+
+/* Estilização dos Botões */
+[class*="button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    margin-left: 5px;
+    background-color: var(--dark-grey);
+    box-shadow: inset -2px -2px var(--black), inset 2px 2px var(--light-grey);
+    cursor: pointer;
+}
