@@ -1,174 +1,62 @@
-body {
-    background-image: url(../images/background.jpg);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border-style: none;
+    box-sizing: border-box;
 }
 
-/* Programas */
-
-#programs {
-    display: flex;
-    flex-direction: column;
-    margin-top: 125px;
-    gap: 25px;
-    width: 195px;
+:root {
+    /* coloração */
+    --background: #008080;
+    --light-grey: #E4E4E4;
+    --dark-grey: #C0C0C0;
+    --black: #232323;
+    --blue: #0511F2;
+    --dark-blue: #000080;
+    /* fonte */
+    --font: "DM Sans", sans-serif;
+    --notepad-font: "Kode Mono", sans-serif;
 }
 
-.application {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
+::selection {
+    color: var(--black);
+    background-color: var(--light-grey);
 }
 
-/* Caixas de Diálogo */
-
-[class*="notification_window"] {
-    position: absolute;
-    width: 300px;
-    box-shadow: inset -2px -2px var(--black), inset 2px 2px var(--light-grey);
-    background-color: var(--dark-grey);
+.text {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--light-grey);
 }
 
-.notification_window_1 {
-    left: 300px;
-    top: 245px;
-}
-.notification_window_2 {
-    left: 525px;
-    top: 385px;
+.text-link {
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--blue);
 }
 
-.window_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px;
-    padding: 2px 3px;
-    background-color: var(--dark-blue);
-}
-.window_header .text {
-    font-weight: 700;
+.icon {
+    width: 40px;
 }
 
-.window_options {
-    display: flex;
-    gap: 5px;
-    margin-right: 2px;
-    cursor: pointer;
+.icon-small {
+    width: 20px;
 }
 
-.window_content {
-    height: 90px;
-    
-    & .text {
-        margin: 15px 0 0 20px;
-        color: var(--black);
-    }
-}
-
-.select_options {
+/* Estilização dos Botões */
+[class*="button"] {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2px;
-    margin-top: 20px;
-}
-
-.option_box {
-    width: 85px;
-    height: 25px;
-}
-
-/* Notepad */
-
-.notepad {
-    position: absolute;
-    right: 150px;
-    top: 200px;
-    width: 350px;
+    margin-left: 5px;
     background-color: var(--dark-grey);
     box-shadow: inset -2px -2px var(--black), inset 2px 2px var(--light-grey);
-}
-
-.notepad_header, .notepad_info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.notepad_header {
-    margin: 5px;
-    padding: 2px 3px;
-    background-color: var(--dark-blue);
-}
-
-.notepad_info {
-    gap: 5px;
-
-    & .text {
-        font-weight: 700;
-    }
-}
-
-.notepad_options {
-    display: flex;
-    gap: 10px;
-    margin-left: 20px;
-
-    & .text {
-        color: var(--black);
-        font-size: 14px;
-        cursor: pointer;
-    }
-}
-.notepad_options p::first-letter {
-    text-decoration: underline;
-}
-
-.notepad_content {
-    padding: 10px;
-    margin: 5px 10px 10px 10px;
-    background-color: var(--light-grey);
-    box-shadow: inset 2px 2px var(--black), inset -2px -2px var(--light-grey);
-
-    overflow: scroll;
-    resize: vertical;
-    width: 330px;
-    min-height: 90px;
-    max-height: 145px;
-}
-.notepad_content .text {
-    color: var(--black);
-    font-family: var(--notepad-font);
-    font-weight: 500;
-}
-
-/* Rodapé do Site */
-
-footer {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    height: 35px;
-    background-color: var(--dark-grey);
-}
-
-#windows_start {
-    width: 70px;
-    height: 80%;
-}
-
-#windows_start .text {
-    color: var(--black);
-    font-weight: 700;
-    font-size: 14px;
-}
-
-#time {
-    color: var(--black);
-    font-weight: 500;
-    margin-right: 15px;
+    cursor: pointer;
 }

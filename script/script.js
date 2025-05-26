@@ -1,4 +1,32 @@
-// Make the DIV element draggable:
+// Formatação do Horário:
+
+function time_stamp() {
+  const display_time = document.getElementById("display_time");
+  var current_time = new Date();
+
+  // Função do Javascript para pegar o tempo
+  var hours = current_time.getHours();
+  var minutes = current_time.getMinutes();
+
+  const time_meridiem = hours >= 12 ? " PM" : " AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // Meia-noite o 0 se torna 12
+
+  // Se minutos forem menor que 10, adiciona um 0. Se não, apenas mostrar
+  const format_minutes = minutes < 10 ? "0" + minutes : minutes;
+
+  // Formatação para mostrar o horário
+  const formatted_time = hours + ":" + format_minutes + time_meridiem;
+  display_time.textContent = formatted_time;
+}
+
+// Chamar a função para rodar o Time Stamp a cada segundo
+setInterval(time_stamp, 1000);
+time_stamp();
+
+
+// Deixar os elementos em estilo Draggable:
+
 dragElement(document.getElementById("window_1"));
 dragElement(document.getElementById("window_2"));
 dragElement(document.getElementById("window_3"));
@@ -38,4 +66,4 @@ function dragElement(elmnt) {
   }
 }
 
-// Código disponibilizado por W3Schools: https://www.w3schools.com/HOWTO/howto_js_draggable.asp
+// Código do draggable disponibilizado por W3Schools: https://www.w3schools.com/HOWTO/howto_js_draggable.asp
